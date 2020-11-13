@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import { PROVIDER_GOOGLE } from 'react-native-maps';
-import MapView from 'react-native-maps';
+import MapView, {Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+
+import mapMarker from './src/images/map-marker.png';
 
 export default function App() {
   return (
@@ -16,7 +17,15 @@ export default function App() {
           latitudeDelta: 0.008,
           longitudeDelta: 0.008,
         }} 
-      />
+      > 
+        <Marker
+          icon={mapMarker}
+          coordinate={{
+            latitude: -14.8521574,
+            longitude: -40.8475082,
+          }}
+        />
+      </MapView>
     </View>
   );
 }
