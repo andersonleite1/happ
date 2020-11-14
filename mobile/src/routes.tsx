@@ -16,10 +16,25 @@ export default function Routers(){
     return (
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false, cardStyle: {backgroundColor: '#f2f3f5'} }}>
-                <Screen name="SalonsMap"         component={SalonsMap}/>
-                <Screen name="SalonsDetails"     component={SalonsDetails}/>
-                <Screen name="SelectMapPosition" component={SelectMapPosition}/>
-                <Screen name="SalonData"         component={SalonData}/>
+                <Screen 
+                    name="SalonsMap"         
+                    component={SalonsMap}
+                />
+
+                <Screen 
+                    name="SalonsDetails"     
+                    component={SalonsDetails}
+                />
+
+                <Screen 
+                    name="SelectMapPosition" 
+                    component={SelectMapPosition}
+                />
+                
+                <Screen 
+                    name="SalonData"         
+                    component={SalonData}
+                />
             </Navigator>
         </NavigationContainer>
     );
