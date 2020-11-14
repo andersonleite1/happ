@@ -2,10 +2,17 @@ import React from 'react';
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
 import MapView, {Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 import mapMarker from '../images/map-marker.png';
 
 export default function SalonsMap(){
+    const navigation = useNavigation();
+
+    function handlerNavigateToSalonsDetails(){
+        navigation.navigate('SalonsDetails');
+    }
+
     return (
         <View style={styles.container}>
       <MapView 
@@ -29,7 +36,7 @@ export default function SalonsMap(){
             longitude: -40.8475082,
           }}
         >
-          <Callout tooltip onPress={() => {alert('Olá')}}>
+          <Callout tooltip onPress={handlerNavigateToSalonsDetails}>
             <View style={styles.calloutContainer}>
               <Text style={styles.calloutText}>
                 Salão Novo Visual
