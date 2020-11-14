@@ -15,7 +15,7 @@ import SalonData from './pages/createSalon/SalonData';
 export default function Routers(){
     return (
         <NavigationContainer>
-            <Navigator screenOptions={{ headerShown: false }}>
+            <Navigator screenOptions={{ headerShown: false, cardStyle: {backgroundColor: '#f2f3f5'} }}>
                 <Screen name="SalonsMap"         component={SalonsMap}/>
                 <Screen name="SalonsDetails"     component={SalonsDetails}/>
                 <Screen name="SelectMapPosition" component={SelectMapPosition}/>
