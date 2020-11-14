@@ -13,6 +13,10 @@ export default function SalonsMap(){
         navigation.navigate('SalonsDetails');
     }
 
+    function handlerNavigateToCreateSalon(){
+        navigation.navigate('SelectMapPosition');
+    }
+
     return (
         <View style={styles.container}>
       <MapView 
@@ -47,7 +51,7 @@ export default function SalonsMap(){
       </MapView>
       <View style={styles.footer}>
         <Text style={styles.footerText}>2 Salões encontrados</Text>
-        <TouchableOpacity style={styles.createSalonButton} onPress={() => {alert('Criar Salão')}}>
+        <TouchableOpacity style={styles.createSalonButton} onPress={handlerNavigateToCreateSalon}>
           <Feather name="plus" size={20} color="#fff"/>
         </TouchableOpacity>
       </View>
