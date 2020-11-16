@@ -11,6 +11,7 @@ import SalonsDetails from './pages/SalonsDetails';
 import SelectMapPosition from './pages/createSalon/SelectMapPosition';
 import SalonData from './pages/createSalon/SalonData';
 
+import Header from './components/Header'
 
 export default function Routers(){
     return (
@@ -24,13 +25,17 @@ export default function Routers(){
                 <Screen 
                     name="SalonsDetails"     
                     component={SalonsDetails}
+                    options={{
+                        headerShown: true,
+                        header: () => <Header title="Salão" />
+                    }}
                 />
 
                 <Screen 
                     name="SelectMapPosition" 
                     component={SelectMapPosition}
                 />
-                
+
                 <Screen 
                     name="SalonData"         
                     component={SalonData}
